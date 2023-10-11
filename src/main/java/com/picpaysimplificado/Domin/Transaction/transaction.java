@@ -17,14 +17,14 @@ import lombok.Getter;
 import lombok.Setter;
 
 
-@Entity(name="users")
-@Table(name = "users")
+@Entity(name="transactions")
+@Table(name = "transactions")
 @Getter
 @Setter
 @AllArgsConstructor
 @EqualsAndHashCode(of="id")
 
-public class transaction {
+public class Transaction {
     
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
