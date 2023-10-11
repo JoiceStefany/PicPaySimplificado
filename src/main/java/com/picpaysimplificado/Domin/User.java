@@ -1,7 +1,5 @@
 package com.picpaysimplificado.Domin;
 
-
-
 import java.math.BigDecimal;
 
 import org.hibernate.usertype.UserType;
@@ -47,6 +45,7 @@ public class User {
 
     private BigDecimal balance;
     
+   
     @Enumerated(EnumType.STRING)
     private UserType userType;
 

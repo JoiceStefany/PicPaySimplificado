@@ -2,7 +2,6 @@ package com.picpaysimplificado.Domin.Transaction;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
-
 import com.picpaysimplificado.Domin.User;
 
 import jakarta.persistence.Entity;
@@ -18,17 +17,18 @@ import lombok.Getter;
 import lombok.Setter;
 
 
-   @Entity(name = "transactions")
-    @Table(name = "transactions")
-    @Getter
-    @Setter
-    @AllArgsConstructor
-    @EqualsAndHashCode(of="id")
+@Entity(name="users")
+@Table(name = "users")
+@Getter
+@Setter
+@AllArgsConstructor
+@EqualsAndHashCode(of="id")
 
 public class transaction {
+    
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private long id;
 
     private BigDecimal amount;
 
@@ -39,6 +39,8 @@ public class transaction {
     @ManyToOne
     @JoinColumn(name = "receiver_id")
     private User receiver;
-
+    
     private LocalDateTime timestamp;
+
+    
 }
